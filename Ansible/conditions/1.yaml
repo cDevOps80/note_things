@@ -11,4 +11,4 @@
         msg: "executing"
       when:
         - name is defined
-        - course is defined
+        - coursee is defined
