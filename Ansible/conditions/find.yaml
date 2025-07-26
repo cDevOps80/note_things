@@ -22,7 +22,7 @@
   - name: echo2
     debug:
       msg: "{{ two }}"
-    when: two.failed is true
+    when: two.failed is false
 
 
 
