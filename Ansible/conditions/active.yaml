@@ -6,13 +6,11 @@
     course: devosp
   tasks:
     - name: Wait for service to be up
-      ansible.builtin.shell: | 
-         systemctl is-active vault
+      ansible.builtin.shell: systemctl is-active vault
       register: service_status
-      ignore_errors: yes
-#      until: service_status.stdout == "active"
-#      retries: 5
-#      delay: 10
+      until: service_status.stdout == "active"
+      retries: 5
+      delay: 10
 
     - name: okk
       ansible.builtin.debug:
