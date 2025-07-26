@@ -12,6 +12,6 @@
   - name: echo
     debug:
       msg: "{{ one }}"
-    when: "'ec2-user' in one.stdout"
+    when: "'ec2-userr' in one.stdout"
 
 
