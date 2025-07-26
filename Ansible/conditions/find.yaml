@@ -14,4 +14,18 @@
       msg: "{{ one }}"
     when: "'ec2-userr' in one.stdout"
 
+  - name: fail
+    ansible.builtin.shell: exit 1
+    register: two
+    ignore_errors: yes
+
+  - name: echo2
+    debug:
+      msg: "{{ two }}"
+    when: two.failed is true
+
+
+
+
+
 
