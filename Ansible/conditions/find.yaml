@@ -6,9 +6,14 @@
     course: devosp
   tasks:
     - name: Run a script only if a file doesn't exist
-      ansible.builtin.shell:  /tmp/1.sh
+      ansible.builtin.shell: bash /tmp/1.sh
       args:
         stdin: "chaitu is"
+      register: one
+
+    - name: debug
+      debug:
+        msg: {{ one }}
 
 
 
