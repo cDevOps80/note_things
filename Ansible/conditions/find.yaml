@@ -1,0 +1,15 @@
+- name: Install sqlite3
+  hosts: localhost
+  become: yes
+  vars:
+    name: chaitu
+    course: devosp
+  tasks:
+  - name: list
+    ansible.builtin.shell: cat /etc/passwd
+    register: one
+
+  - name: echo
+    debug:
+      msg: "{{ one }}"
+
