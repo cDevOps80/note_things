@@ -9,6 +9,7 @@
       ansible.builtin.shell: | 
          systemctl is-active vault
       register: service_status
+      ignore_errors: yes
 #      until: service_status.stdout == "active"
 #      retries: 5
 #      delay: 10
