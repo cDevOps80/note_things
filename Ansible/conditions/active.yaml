@@ -8,7 +8,7 @@
     - name: Wait for service to be up
       ansible.builtin.shell: systemctl is-active vault
       register: service_status
-      until: service_status.stdout == "active"
+      until: service_status.stdout == "inactive"
       retries: 5
       delay: 10
 
