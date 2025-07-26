@@ -15,7 +15,7 @@
     when: "'ec2-userr' in one.stdout"
 
   - name: fail
-    ansible.builtin.shell: exit 1
+    ansible.builtin.shell: exit 0
     register: two
     ignore_errors: yes
 
