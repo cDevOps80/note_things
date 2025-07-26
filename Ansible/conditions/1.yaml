@@ -1,0 +1,14 @@
+
+- name: Install sqlite3
+  hosts: localhost
+  become: yes
+  vars:
+    name: chaitu
+    course: devosp
+  tasks:
+    - name: task-1
+      ansible.builtin.debug:
+        msg: "executing"
+      when:
+        - name is defined
+        - course is defined
