@@ -7,7 +7,7 @@
   tasks:
     - name: Give me the largest permutations (order matters)
       ansible.builtin.debug:
-        msg: "{{ [1,2,3,4,5] | ansible.builtin.permutations | list }}"
+        msg: "{{ [1,2,3,4,5] | ansible.builtin | list }}"
 
 
 
