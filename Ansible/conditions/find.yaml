@@ -13,7 +13,7 @@
 
     - name: debug
       debug:
-        msg: {{ one }}
+        msg: "{{ one }}"
 
 
 
